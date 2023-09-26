@@ -18,8 +18,8 @@ server.use(express.static('dist'))
 
 // server.use(urlencoded({extended:true}))
 
-server.use('/user', userRouter)
-server.use('/notes',auth, notesRouter)
+server.use('api/user', userRouter)
+server.use('api/notes',auth, notesRouter)
 
 // server.get('/*', (req,res)=>{
 //     const filePath = path.resolve(__dirname,'./build/index.html')
