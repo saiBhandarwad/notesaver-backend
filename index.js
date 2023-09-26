@@ -26,6 +26,9 @@ server.use('/notes',auth, notesRouter)
 //     console.log({filePath});
 //     res.sendFile(filePath)
 // })
+server.get('/api', (req,res)=>{
+    res.send('<h1>api<h1>')
+})
 
 server.listen(port, () => {
     console.log(`notesaver app listning at port : ${port}`);
