@@ -15,12 +15,12 @@
       "dest": "index.js"
     },
     {
-      "src": "/",
-      "dest": "build/index.html"
+        "src": "/notes",
+        "dest": "index.js"
     },
     {
-      "src": "/notes",
-      "dest": "index.js"
+      "src": "/",
+      "dest": "build/index.html"
     }
   ]
 }
