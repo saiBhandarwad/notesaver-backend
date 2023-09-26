@@ -1,4 +1,5 @@
 const express = require('express')
+require('dotenv').config()
 const connectToMongo = require('./db')
 const userRouter = require('./routes/userRouter')
 const { urlencoded } = require('body-parser')
@@ -7,11 +8,10 @@ const cors = require('cors')
 const path = require('path')
 const notesRouter = require('./routes/notesRouter')
 const server = express()
-const port = 8080
+const port = process.env.PORT
 
 
-connectToMongo()
-
+connectToMongo( process.env.MONGO_URL)
 server.use(express.json())
 server.use(cors())
 server.use(express.static('dist'))
@@ -23,7 +23,7 @@ server.use('/notes',auth, notesRouter)
 
 server.get('/*', (req,res)=>{
     const filePath = path.resolve(__dirname,'./dist/index.html')
-    console.log(filePath);
+    console.log({filePath});
     res.sendFile(filePath)
 })
 
