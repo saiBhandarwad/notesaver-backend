@@ -22,7 +22,7 @@ server.use('/user', userRouter)
 server.use('/notes',auth, notesRouter)
 
 server.get('/*', (req,res)=>{
-    const filePath = path.resolve(__dirname,'./dist/index.html')
+    const filePath = path.resolve(__dirname,'build/index.html')
     console.log({filePath});
     res.sendFile(filePath)
 })
