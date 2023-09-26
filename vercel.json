@@ -11,16 +11,16 @@
   ],
   "routes": [
     {
+      "src": "/user",
+      "dest": "index.js"
+    },
+    {
       "src": "/",
-      "dest": "build/index.html" 
+      "dest": "build/index.html"
     },
     {
-        "src": "/user",
-        "dest": "index.js" 
-    },
-    {
-        "src": "/notes",
-        "dest": "index.js" 
+      "src": "/notes",
+      "dest": "index.js"
     }
   ]
 }
