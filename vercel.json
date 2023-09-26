@@ -15,12 +15,12 @@
       "dest": "build/index.html" 
     },
     {
-        "src": "/(.*)",
-        "dest": "index.js" 
+        "src": "/user",
+        "dest": "/index.js" 
     },
     {
-        "src": "/*",
-        "dest": "index.js" 
+        "src": "/notes",
+        "dest": "/index.js" 
     }
   ]
 }
