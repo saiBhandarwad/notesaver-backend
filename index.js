@@ -14,18 +14,18 @@ const port = process.env.PORT
 connectToMongo( process.env.MONGO_URL)
 server.use(express.json())
 server.use(cors())
-server.use(express.static('build'))
+// server.use(express.static('build'))
 
 // server.use(urlencoded({extended:true}))
 
 server.use('/user', userRouter)
 server.use('/notes',auth, notesRouter)
 
-server.get('/', (req,res)=>{
-    const filePath = path.resolve(__dirname,'./build/index.html')
-    console.log({filePath});
-    res.sendFile(filePath)
-})
+// server.get('/', (req,res)=>{
+//     const filePath = path.resolve(__dirname,'./build/index.html')
+//     console.log({filePath});
+//     res.sendFile(filePath)
+// })
 
 server.listen(port, () => {
     console.log(`notesaver app listning at port : ${port}`);
