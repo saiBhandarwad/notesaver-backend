@@ -11,12 +11,8 @@
   ],
   "routes": [
     {
-      "src": "/user",
+      "src": "/",
       "dest": "index.js"
-    },
-    {
-        "src": "/notes",
-        "dest": "index.js"
     },
     {
       "src": "/",
