@@ -11,8 +11,12 @@
   ],
   "routes": [
     {
-      "src": "/server",
+      "src": "/",
       "dest": "index.js"
+    },
+    {
+      "src": "/api",
+      "dest": "build/index.html"
     }
   ]
 }

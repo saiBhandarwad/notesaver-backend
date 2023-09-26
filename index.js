@@ -21,11 +21,11 @@ server.use(express.static('dist'))
 server.use('/user', userRouter)
 server.use('/notes',auth, notesRouter)
 
-server.get('/*', (req,res)=>{
-    const filePath = path.resolve(__dirname,'./build/index.html')
-    console.log({filePath});
-    res.sendFile(filePath)
-})
+// server.get('/*', (req,res)=>{
+//     const filePath = path.resolve(__dirname,'./build/index.html')
+//     console.log({filePath});
+//     res.sendFile(filePath)
+// })
 
 server.listen(port, () => {
     console.log(`notesaver app listning at port : ${port}`);
